@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Red Hat Display', sans-serif;
+}
+
+body {
+    background: url('images/pattern-background-desktop.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: top;
+    background-color: hsl(225, 100%, 94%);
+}
+
+main {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+.card {
+    width: 420px;
+    height: auto;
+    background: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 20px;
+    box-shadow: 0 0 26px #2935e7;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.card .top img {
+    width: 100%;
+    border-radius: 20px 20px 0 0;
+}
+
+.card .content {
+    padding: 30px 46px;
+    text-align: center;
+}
+
+.content h2 {
+    font-size: 30px;
+    font-weight: 700;
+    color: hsl(223, 47%, 23%);
+    margin-bottom: 16px;
+}
+
+.content .para {
+    margin-bottom: 30px;
+    font-size: 16px;
+    color: hsl(224, 23%, 55%);
+    line-height: 1.4rem;
+}
+
+.content .plan {
+    width: 100%;
+    border-radius: 10px;
+    background: hsl(225, 100%, 98%);
+    display: flex;
+    align-items: center;
+    padding: 16px;
+    margin-bottom: 40px;
+}
+
+.plan .text {
+    flex: 1;
+    text-align: start;
+    margin: 0 18px;
+}
+
+.plan .text p {
+    color: hsl(223, 47%, 23%);
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.plan .text span {
+    color: hsl(224, 23%, 55%);
+    font-size: 14px;
+}
+
+.plan .change {
+    text-decoration: none;
+    font-weight: bold;
+    color: hsl(245, 75%, 52%);
+    position: relative;
+}
+
+.change::before {
+    content: '';
+    background: hsl(245, 75%, 52%);
+    position: absolute;
+    bottom: -2px;
+    width: 0;
+    height: 2px;
+    transition: width 0.2s;
+}
+
+.change:hover::before {
+    width: 100%;
+}
+
+.content .btn {
+    width: 100%;
+    display: block;
+    background: hsl(245, 75%, 52%);
+    color: white;
+    box-shadow: 0 10px 20px hsl(225, 72%, 65%);
+    padding: 10px 0;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    margin-bottom: 36px;
+    cursor: pointer;
+    transition: all 0.4s;
+}
+
+.btn:hover {
+    transform: translate(0, -8px);
+    background: hsl(225, 86%, 54%)
+}
+
+.content .cancel {
+    text-decoration: none;
+    color: hsl(224, 23%, 55%);
+    font-weight: bold;
+}
+
+.cancel:hover {
+    color: hsl(245, 75%, 52%);
+}
+
+.attribution {
+    position: absolute;
+    bottom: 6px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    font-weight: bold;
+    color: hsl(224, 23%, 55%);
+}
+
+.attribution a {
+    font-size: 18px;
+    color: hsl(245, 75%, 52%);
+    text-decoration: none;
+    margin: 0 2px;
+    transition: all 0.4s;
+}
+
+.attribution a:hover {
+    color: #102030;
+}
+
+@media only screen and (max-width:800px) {
+    .card {
+        width: 80%;
+    }
+
+    .card .content {
+        padding: 20px;
+    }
+
+    .content h2 {
+        font-size: 26px;
+    }
+
+    .content .para {
+        line-height: 1.6rem;
+        font-weight: 200;
+    }
+
+    .plan .text p,
+    span {
+        font-size: 16px;
+    }
+
+    .attribution {
+        left: 0;
+        transform: translate(0, 0);
+        text-align: center;
+    }
+}
